@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculatorFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="25dp">
+
+                <TextView
+                    android:id="@+id/sd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Strength Deadlift"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/pt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Power Throw"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sd" />
+
+                <TextView
+                    android:id="@+id/pu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Release PU"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pt" />
+
+                <TextView
+                    android:id="@+id/sdc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Sprint Drag Carry"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pu" />
+
+                <TextView
+                    android:id="@+id/lt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Leg Tuck"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sdc" />
+
+                <TextView
+                    android:id="@+id/run"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:text="2-Mile Run"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lt" />
+
+                <TextView
+                    android:id="@+id/total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="Result:"
+                    app:layout_constraintEnd_toStartOf="@+id/totalRes"
+                    app:layout_constraintTop_toBottomOf="@+id/run" />
+
+                <TextView
+                    android:id="@+id/sdres"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="32dp"
+                    app:layout_constraintStart_toEndOf="@+id/sdin"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/ptres"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="32dp"
+                    app:layout_constraintStart_toEndOf="@+id/ptin"
+                    app:layout_constraintTop_toBottomOf="@+id/sdres" />
+
+                <TextView
+                    android:id="@+id/pures"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="32dp"
+                    app:layout_constraintStart_toEndOf="@+id/puin"
+                    app:layout_constraintTop_toBottomOf="@+id/ptres" />
+
+                <TextView
+                    android:id="@+id/sdcres"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    app:layout_constraintStart_toStartOf="@+id/pures"
+                    app:layout_constraintTop_toBottomOf="@+id/pures" />
+
+                <TextView
+                    android:id="@+id/ltres"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="32dp"
+                    app:layout_constraintStart_toEndOf="@+id/ltin"
+                    app:layout_constraintTop_toBottomOf="@+id/sdcres" />
+
+                <TextView
+                    android:id="@+id/runres"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    app:layout_constraintStart_toStartOf="@+id/ltres"
+                    app:layout_constraintTop_toBottomOf="@+id/ltres" />
+
+                <TextView
+                    android:id="@+id/totalRes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    app:layout_constraintStart_toStartOf="@+id/ltres"
+                    app:layout_constraintTop_toBottomOf="@+id/runres" />
+
+                <EditText
+                    android:id="@+id/sdin"
+                    android:layout_width="79dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="140dp"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginBottom="24dp"
+                    android:ems="10"
+                    android:hint="lbs"
+                    android:inputType="number"
+                    android:nextFocusForward="@+id/ptin"
+                    app:layout_constraintBottom_toTopOf="@+id/pt"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <EditText
+                    android:id="@+id/ptin"
+                    android:layout_width="79dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="140dp"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginBottom="24dp"
+                    android:ems="10"
+                    android:hint="m"
+                    android:inputType="numberDecimal"
+                    android:nextFocusForward="@+id/puin"
+                    app:layout_constraintBottom_toTopOf="@+id/pu"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <EditText
+                    android:id="@+id/puin"
+                    android:layout_width="79dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="140dp"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginBottom="24dp"
+                    android:ems="10"
+                    android:hint="reps"
+                    android:inputType="number"
+                    android:nextFocusForward="@+id/sdcin"
+                    app:layout_constraintBottom_toTopOf="@+id/sdc"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <EditText
+                    android:id="@+id/sdcin"
+                    android:layout_width="42dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="140dp"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginBottom="24dp"
+                    android:ems="10"
+                    android:hint="mm"
+                    android:inputType="number"
+                    android:nextFocusDown="@+id/sdcin2"
+                    android:nextFocusForward="@+id/sdcin2"
+                    app:layout_constraintBottom_toTopOf="@+id/lt"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <EditText
+                    android:id="@+id/sdcin2"
+                    android:layout_width="42dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="190dp"
+                    android:layout_marginLeft="190dp"
+                    android:layout_marginBottom="24dp"
+                    android:ems="10"
+                    android:hint="ss"
+                    android:inputType="number"
+                    android:nextFocusForward="@+id/ltin"
+                    app:layout_constraintBottom_toTopOf="@+id/lt"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <EditText
+                    android:id="@+id/ltin"
+                    android:layout_width="79dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="140dp"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginBottom="24dp"
+                    android:ems="10"
+                    android:hint="reps"
+                    android:inputType="number"
+                    android:nextFocusForward="@+id/runin"
+                    app:layout_constraintBottom_toTopOf="@+id/run"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <EditText
+                    android:id="@+id/runin"
+                    android:layout_width="42dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="140dp"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginBottom="24dp"
+                    android:ems="10"
+                    android:hint="mm"
+                    android:inputType="number"
+                    android:nextFocusDown="@+id/runin2"
+                    android:nextFocusForward="@+id/runin2"
+                    app:layout_constraintBottom_toTopOf="@+id/total"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <EditText
+                    android:id="@+id/runin2"
+                    android:layout_width="42dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="190dp"
+                    android:layout_marginLeft="190dp"
+                    android:layout_marginBottom="24dp"
+                    android:ems="10"
+                    android:hint="ss"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toTopOf="@+id/total"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="83dp"
+                    android:gravity="center_horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        android:id="@+id/text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="32dp"
+                        android:text="ACFT Calculator"></TextView>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="18dp"
+                    android:layout_height="66dp"
+                    android:text=":"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                    android:textColor="#888888"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toEndOf="@+id/sdcin"
+                    app:layout_constraintTop_toTopOf="@+id/sdcin" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="18dp"
+                    android:layout_height="66dp"
+                    android:text=":"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                    android:textColor="#888888"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toEndOf="@+id/runin"
+                    app:layout_constraintTop_toTopOf="@+id/runin" />
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</FrameLayout>
